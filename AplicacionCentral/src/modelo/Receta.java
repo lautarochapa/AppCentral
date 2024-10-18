@@ -3,6 +3,7 @@ package modelo;
 // ALE
 public class Receta{
    
+    
     private String droga;
     private String formato;
     private Diagnostico diagnostico;
