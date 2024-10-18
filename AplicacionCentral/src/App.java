@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");        
-        // test de push Ale
+        // test de push Ale - desktop
     }
 }
