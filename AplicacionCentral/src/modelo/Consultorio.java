@@ -3,6 +3,7 @@ package modelo;
 import java.util.ArrayList;
 
 // VERSION MARIANO
+//comentario de prueba
 public class Consultorio {
 
     private int id_consultorio;
