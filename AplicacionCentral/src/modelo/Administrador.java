@@ -5,6 +5,4 @@ public class Administrador {
     //TODO: ESCRIBIR LA CLASE
 
 
-    asfasf
-
 }

@@ -5,28 +5,65 @@ import java.util.Date;
 
 // Marce
 public class Calendario {
-    private int id;
-    private Date fecha;
-    private String evento;
+    private List<Asignacion> asignaciones;
 
-    public Calendario(int id, Date fecha, String evento) {
-        this.id = id;
-        this.fecha = fecha;
-        this.evento = evento;
+    public Calendario(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
     }
 
     // Getters y Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public Date getFecha() { return fecha; }
-    public void setFecha(Date fecha) { this.fecha = fecha; }
-
-    public String getEvento() { return evento; }
-    public void setEvento(String evento) { this.evento = evento; }
-
-    @Override
-    public String toString() {
-        return "Calendario [ID=" + id + ", Fecha=" + fecha + ", Evento=" + evento + "]";
+    public int getAsignaciones() { 
+        return asignaciones; 
     }
+    public void setAsignaciones(List<Asignacion> asignaciones) { 
+        this.asignaciones = asignaciones; 
+    }
+
+
+
 }
+
+
+//
+
+Asignacion 1 
+            viernes
+            19 ho
+            consultorio 10
+            Juan
+
+
+Asignacion 2
+        martes
+        19 ho
+        consultorio 10
+        Juan
+
+
+Asignacion 3 
+            miercoles
+            19 ho
+            consultorio 10
+            Juan
+
+
+            
+Asignacion asig1 = new Asignacion("lunes")
+Asignacion asig2 = new Asignacion("lunes")
+Asignacion asig3 = new Asignacion("lunes")
+
+
+
+List<Asignacion> lista = new List<Asignacion>(asig1, asig2, asig3);
+
+Calendario calend1 = new Calendario(lista);
+
+calend1.removeAsignacion(asign3);
+
+calend1.addAsign(asign4);
+
+calend1.getAsignacionesporDia("Lunes") -->> devuelva todo lo que coincide con ese dia... --> SELECT ^FROM WHERE DIA = "LUNES"
+
+
+asig1.setDia("viernes"); ???? esto impacta sobre la lista???? 
+

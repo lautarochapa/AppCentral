@@ -1,22 +1,44 @@
 package modelo;
 
+import java.util.ArrayList;
 
 // VERSION MARIANO
 public class Consultorio {
-    int id_consultorio;
-    int piso;
-    int box;
-    Sucursal sucursal;
-    Doctor list; // no se usar lista. je
 
-    public Consultorio(int id_consultorio, int piso, int box, Sucursal sucursal, Doctor doctor) {
+    private int id_consultorio;
+    private int piso;
+    private int box;
+    private Sucursal sucursal;
+    private ArrayList<Doctor> doctores; 
+
+
+    public Consultorio(){
+
+    }
+
+
+    public Consultorio(int id_consultorio, int piso, int box, Sucursal sucursal, ArrayList<Doctor> doctores) {
 
         this.id_consultorio = id_consultorio;
         this.piso = piso;
         this.box = box;
         this.sucursal = sucursal;
-        this.doctor = doctor;
+        this.doctores = doctores;
     }
+
+    
+    public Consultorio(int id_consultorio, int piso, int box, Sucursal sucursal) {
+
+        this.id_consultorio = id_consultorio;
+        this.piso = piso;
+        this.box = box;
+        this.sucursal = sucursal;
+    }
+
+
+
+
+
     // Getters
     public int getIdConsultorio() {
         return id_consultorio;
@@ -34,8 +56,8 @@ public class Consultorio {
         return sucursal;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public ArrayList<Doctor> getDoctores() {
+        return doctores;
     }
 
     // Setters
@@ -55,9 +77,25 @@ public class Consultorio {
         this.sucursal = sucursal;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
+    public void setDoctores(ArrayList<Doctor> doctores) {
+        this.doctores = doctores;
     }
+
+
+
+    //metodos auxiliares
+
+    public void addDoctor(Doctor doc){
+        this.doctores.add(doc);
+    }
+
+    public void removeDoctor(Doctor doc){
+        this.doctores.remove(doc);
+    }
+
+    public void buscarPorId(int id){
+    }
+
 
     // Sobrescribir el método toString
     @Override
@@ -67,10 +105,15 @@ public class Consultorio {
                ", piso=" + piso +
                ", box=" + box +
                ", sucursal=" + sucursal +
-               ", doctor=" + doctor +
+               ", doctor=" + doctores +
                '}';
     }
 }
+
+
+
+
+
 
 
 

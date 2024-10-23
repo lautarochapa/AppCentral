@@ -8,7 +8,7 @@ public class Calificacion {
     private int iPuntuacion;
 
     // Constructor
-    public  Libro(String sDescripcion, int iPuntuacion) {
+    public  Calificacion(String sDescripcion, int iPuntuacion) {
         this.sDescripcion = sDescripcion;
         this.iPuntuacion = iPuntuacion;
     }

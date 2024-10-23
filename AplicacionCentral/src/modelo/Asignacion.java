@@ -17,34 +17,35 @@ public class Asignacion {
         this.doctor = doctor;
     }
 
-}
+    //Setters
 
-//Setters
+    public void setDia(String dia){
+        this.dia = dia;
+    }
+    public void setHorario(Horario horario){
+        this.horario = horario;
+    }
+    public void setConsultorio(Consultorio consultorio){
+        this.consultorio = consultorio;
+    }
+    public void setDoctor(Doctor doctor){
+        this.doctor = doctor;
+    }
 
-public void setDia(String dia){
-    this.dia = dia;
-}
-public void setHorario(Horario horario){
-    this.horario = horario;
-}
-public void setConsultorio(Consultorio consultorio){
-    this.consultorio = consultorio;
-}
-public void setDoctor(Doctor doctor){
-    this.doctor = doctor;
-}
+    //Getters
 
-//Getters
+    public String getDia(){
+        return dia;
+    }
+    public Horario getHorario(){
+        return horario;
+    }
+    public Consultorio getConsultorio(){
+        return consultorio;
+    }
+    public Doctor getDoctor(){
+        return doctor;
+    }
 
-public String getDia(){
-    return dia;
-}
-public Horario getHorario(){
-    return horario;
-}
-public Consultorio getConsultorio(){
-    return consultorio;
-}
-public Doctor getDoctor(){
-    return doctor;
+
 }
