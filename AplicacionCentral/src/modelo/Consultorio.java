@@ -3,7 +3,6 @@ package modelo;
 import java.util.ArrayList;
 
 // VERSION MARIANO
-//comentario de prueba
 public class Consultorio {
 
     private int id_consultorio;
@@ -11,6 +10,7 @@ public class Consultorio {
     private int box;
     private Sucursal sucursal;
     private ArrayList<Doctor> doctores; 
+
 
 
     public Consultorio(){
@@ -35,8 +35,6 @@ public class Consultorio {
         this.box = box;
         this.sucursal = sucursal;
     }
-
-
 
 
 
@@ -94,8 +92,17 @@ public class Consultorio {
         this.doctores.remove(doc);
     }
 
-    public void buscarPorId(int id){
+    public Doctor buscarDoctorPorId(int id){
+
+        for (Doctor doctor : doctores) {
+            if(doctor.getId() == id){
+                return doctor;
+            }
+        }
+        return null;
     }
+
+
 
 
     // Sobrescribir el método toString
